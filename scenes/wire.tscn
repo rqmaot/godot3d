@@ -1,15 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxfodfp7y41u5"]
+[gd_scene load_steps=2 format=3 uid="uid://bxfodfp7y41u5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4peip"]
-albedo_color = Color(0.357885, 0.419121, 0.455947, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_kf2s7"]
-material = SubResource("StandardMaterial3D_4peip")
+[ext_resource type="Script" path="res://scenes/wire.gd" id="1_c8lrj"]
 
 [node name="Wire" type="Node3D"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.015, 0, 0, 0, 1, 0, 0, 0, 0.015, 0, 0, 0)
-mesh = SubResource("CylinderMesh_kf2s7")
-
-[node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="."]
+script = ExtResource("1_c8lrj")

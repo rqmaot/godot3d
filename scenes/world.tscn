@@ -34,6 +34,7 @@ ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55658, 0)
 script = ExtResource("1_0c7sn")
 
 [node name="Player" parent="." instance=ExtResource("1_7aaj2")]
