@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://0b80cy76g8ki"]
+
+[ext_resource type="Texture2D" uid="uid://comkowsy7ols3" path="res://addons/kenney_prototype_textures/light/texture_08.png" id="1_lsdbf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jucva"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nayw2"]
+albedo_color = Color(0.694118, 0.694118, 0.694118, 1)
+albedo_texture = ExtResource("1_lsdbf")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_in7nc"]
+
+[node name="Cube" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_jucva")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_nayw2")
+mesh = SubResource("BoxMesh_in7nc")
