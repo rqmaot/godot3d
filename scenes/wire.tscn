@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxfodfp7y41u5"]
+[gd_scene load_steps=4 format=3 uid="uid://bxfodfp7y41u5"]
 
 [ext_resource type="Script" path="res://scenes/wire.gd" id="1_c8lrj"]
 
-[node name="Wire" type="Node3D"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_3x3y2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o6hbj"]
+material = SubResource("ORMMaterial3D_3x3y2")
+
+[node name="Wire" type="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_o6hbj")
 script = ExtResource("1_c8lrj")

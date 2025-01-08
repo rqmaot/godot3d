@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bci54pg3umiph"]
+[gd_scene load_steps=6 format=3 uid="uid://bci54pg3umiph"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_sk4be"]
 [ext_resource type="Texture2D" uid="uid://64pn5paoe5cf" path="res://images/crosshair.png" id="2_tf0tf"]
+[ext_resource type="PackedScene" uid="uid://bxfodfp7y41u5" path="res://scenes/wire.tscn" id="3_0rvrs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m6xxg"]
 
@@ -29,3 +30,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_tf0tf")
 
 [node name="LookRaycast" type="RayCast3D" parent="Camera3D"]
+
+[node name="LeftWire" parent="." instance=ExtResource("3_0rvrs")]
+
+[node name="RightWire" parent="." instance=ExtResource("3_0rvrs")]
